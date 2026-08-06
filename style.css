@@ -118,7 +118,7 @@ body{
 .installer{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
 .phone-crop{
   aspect-ratio:1170/1320;overflow:hidden;max-width:460px;
-  border:1px solid var(--ruleDark);display:block;
+  border:1px solid var(--ruleDark);display:block;margin:0 auto;
 }
 .phone-shot{
   display:block;width:100%;
