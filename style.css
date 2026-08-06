@@ -1,0 +1,253 @@
+/* Prephase — shared stylesheet
+   Tokens per design-brief.md */
+
+:root{
+  --page:#FAFAF8;
+  --white:#FFFFFF;
+  --ink:#1A1A1A;
+  --inkMid:#5F5C55;
+  --inkDim:#98948A;
+  --rule:#E5E2DA;
+  --ruleDark:#B8B4A8;
+  --alt:#F4F2EC;
+  --altWarm:#FBF6EE;
+  --orange:#C8631A;
+  --orangeDim:#A85214;
+  --green:#2E7D32;
+  --red:#C62828;
+  --redTint:#FBEAEA;
+  --sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--page);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* ---------- header ---------- */
+.masthead{
+  background:var(--page);
+  border-bottom:3px solid var(--orange);
+  position:sticky;top:0;z-index:20;
+}
+.masthead .wrap{
+  display:flex;align-items:baseline;justify-content:space-between;
+  padding-top:18px;padding-bottom:14px;
+}
+.lockup{
+  font-family:var(--mono);
+  font-size:15px;font-weight:700;letter-spacing:0.04em;
+  color:var(--ink);text-decoration:none;
+}
+.nav{display:flex;gap:26px}
+.nav a{
+  font-size:11px;text-transform:uppercase;letter-spacing:0.14em;
+  color:var(--inkMid);text-decoration:none;padding-bottom:2px;
+}
+.nav a.on{color:var(--ink);border-bottom:2px solid var(--orange)}
+.nav a:hover{color:var(--ink)}
+
+/* ---------- statement ---------- */
+.statement{padding:74px 0 58px;border-bottom:1px solid var(--rule)}
+.eyebrow{
+  font-size:10px;text-transform:uppercase;letter-spacing:0.2em;
+  color:var(--inkDim);margin:0 0 22px;
+}
+.statement h1{
+  font-size:38px;line-height:1.18;font-weight:700;
+  letter-spacing:-0.015em;margin:0 0 26px;max-width:19ch;
+}
+.statement p{
+  font-size:17px;line-height:1.6;color:var(--inkMid);
+  max-width:60ch;margin:0 0 14px;
+}
+.statement p strong{color:var(--ink);font-weight:600}
+
+/* ---------- section band ---------- */
+.band{
+  background:var(--ink);color:var(--white);
+  display:flex;align-items:baseline;gap:14px;
+  padding:9px 14px;margin:66px 0 0;
+}
+.band .num{
+  font-family:var(--mono);font-size:11px;font-weight:700;
+  color:var(--orange);letter-spacing:0.06em;
+}
+.band .nm{
+  font-size:11px;text-transform:uppercase;letter-spacing:0.16em;font-weight:600;
+}
+.band .rt{
+  margin-left:auto;font-size:10px;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--inkDim);
+}
+.after-band{padding-top:28px}
+.lede{font-size:15px;color:var(--inkMid);max-width:860px;margin:0 auto 30px}
+
+/* ---------- video ---------- */
+.video{
+  background:transparent;border:1px solid var(--ink);
+  width:100%;max-width:860px;height:auto;
+  display:block;margin:0 auto;
+}
+.caption{
+  font-size:12px;color:var(--inkDim);
+  text-align:center;max-width:860px;margin:10px auto 0;
+}
+
+/* ---------- packets ---------- */
+.packets{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.packet h3{
+  font-size:11px;text-transform:uppercase;letter-spacing:0.16em;
+  margin:0 0 4px;font-weight:600;
+}
+.packet .who{font-size:12px;color:var(--inkDim);margin:0 0 16px}
+.packet .note{font-size:13px;color:var(--inkMid);margin:16px 0 0;max-width:44ch}
+.packet img{
+  display:block;width:100%;
+  border:1px solid var(--ruleDark);
+}
+
+/* ---------- installer ---------- */
+.installer{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.phone-crop{
+  aspect-ratio:1170/1320;overflow:hidden;max-width:460px;
+  border:1px solid var(--ruleDark);display:block;
+}
+.phone-shot{
+  display:block;width:100%;
+  object-fit:cover;object-position:top;
+  border:none;
+}
+.installer .note{font-size:15px;color:var(--inkMid);max-width:46ch}
+.installer .note p{margin:0 0 14px}
+.pointlist{list-style:none;margin:22px 0 0;padding:0}
+.pointlist li{
+  padding:11px 0;border-top:1px solid var(--rule);
+  display:flex;gap:14px;font-size:13px;
+}
+.pointlist .k{
+  flex:0 0 92px;font-size:10px;text-transform:uppercase;letter-spacing:0.13em;
+  color:var(--inkDim);padding-top:2px;
+}
+
+/* ---------- worksheet ---------- */
+.sheet-block{display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start}
+.sheet-copy p{font-size:15px;color:var(--inkMid);max-width:52ch;margin:0 0 14px}
+.dl{
+  background:var(--white);border:1px solid var(--ruleDark);padding:22px;
+}
+.dl .fn{
+  font-family:var(--mono);font-size:12px;font-weight:600;margin-bottom:3px;
+}
+.dl .fs{font-size:11px;color:var(--inkDim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
+.btn{
+  display:block;width:100%;background:var(--orange);color:#fff;border:0;
+  padding:12px;font-family:var(--sans);font-size:11px;font-weight:700;
+  letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;text-align:center;
+  text-decoration:none;
+}
+.dl .after{
+  margin-top:18px;padding-top:16px;border-top:1px solid var(--rule);
+  font-size:12px;color:var(--inkMid);
+}
+.dl input{
+  width:100%;margin-top:9px;padding:9px;border:1px solid var(--rule);
+  background:var(--page);font-family:var(--sans);font-size:13px;color:var(--ink);
+}
+
+/* ---------- writing ---------- */
+.writing{margin-top:8px}
+.wr{
+  display:block;text-decoration:none;color:inherit;
+  padding:20px 0;border-top:1px solid var(--rule);
+}
+.wr:last-of-type{border-bottom:1px solid var(--rule)}
+.wr h4{font-size:17px;margin:0 0 5px;font-weight:600}
+.wr:hover h4{color:var(--orange)}
+.wr p{font-size:14px;color:var(--inkMid);margin:0;max-width:64ch}
+
+/* ---------- footer ---------- */
+footer{
+  margin-top:80px;border-top:1px solid var(--ruleDark);
+  padding:26px 0 60px;
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-size:11px;color:var(--inkDim);letter-spacing:0.1em;text-transform:uppercase;
+}
+footer .lk{font-family:var(--mono);color:var(--inkMid);letter-spacing:0.04em;text-transform:none;font-size:12px}
+
+@media (max-width:760px){
+  .statement{padding:48px 0 40px}
+  .statement h1{font-size:29px}
+  .packets{grid-template-columns:1fr;gap:40px}
+  .installer{grid-template-columns:1fr;gap:30px}
+  .phone-crop{max-width:300px}
+  .sheet-block{grid-template-columns:1fr;gap:26px}
+  .nav{gap:18px}
+  .band{margin-top:50px}
+}
+
+/* ---------- long-form article pages (/selections, /no-ai, /writing) ---------- */
+main{
+  padding:1.75rem 1.25rem 3rem;
+}
+
+article{
+  max-width:68ch;
+  margin:0 auto;
+}
+
+main h1{
+  font-size:1.5rem;
+  line-height:1.35;
+  font-weight:700;
+  color:var(--ink);
+  margin:0 0 1.25rem;
+  letter-spacing:normal;
+  max-width:none;
+}
+
+main h2{
+  font-size:1.125rem;
+  line-height:1.4;
+  font-weight:700;
+  color:var(--ink);
+  margin:2rem 0 1rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--rule);
+}
+
+main p{
+  font-size:1.0625rem;
+  line-height:1.7;
+  color:var(--ink);
+  margin:0 0 1.1rem;
+  max-width:none;
+}
+
+main hr{
+  border:none;
+  border-top:1px solid var(--ruleDark);
+  margin:2rem 0;
+}
+
+article a{
+  color:var(--orange);
+  text-decoration:underline;
+}
+
+article a:hover{
+  color:var(--orangeDim);
+}
+
+@media (min-width:640px){
+  main p{
+    font-size:1.125rem;
+  }
+}
