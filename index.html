@@ -99,7 +99,11 @@
         <a class="btn" href="/files/Prephase-Selections-Worksheet.xlsx" download>Download</a>
         <div class="after">
           Prephase Residential is in development. Leave an email to hear when it ships, or send a filled worksheet back and the first packet comes back free.
-          <input type="email" placeholder="you@company.com">
+          <form id="worksheet-form" action="https://formspree.io/f/mwleplrb" method="POST">
+            <input type="email" name="email" placeholder="you@company.com" required>
+            <input type="hidden" name="_subject" value="Prephase worksheet signup">
+            <button type="submit" class="btn btn-sm">Notify me</button>
+          </form>
         </div>
       </div>
     </div>
@@ -123,5 +127,25 @@
   </footer>
 
 </div>
+<script>
+(function(){
+  var form = document.getElementById('worksheet-form');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(res){
+      form.outerHTML = res.ok
+        ? '<p>The address is on the list.</p>'
+        : '<p>That did not go through. The address is cmurphy@prephase.io.</p>';
+    }).catch(function(){
+      form.outerHTML = '<p>That did not go through. The address is cmurphy@prephase.io.</p>';
+    });
+  });
+})();
+</script>
 </body>
 </html>
