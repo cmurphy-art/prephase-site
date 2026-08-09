@@ -139,7 +139,7 @@
       headers: { 'Accept': 'application/json' }
     }).then(function(res){
       form.outerHTML = res.ok
-        ? '<p>The address is on the list.</p>'
+        ? '<p>You\'re all set. Keep an eye on your inbox. I\'ll be in touch shortly.</p>'
         : '<p>That did not go through. The address is cmurphy@prephase.io.</p>';
     }).catch(function(){
       form.outerHTML = '<p>That did not go through. The address is cmurphy@prephase.io.</p>';
