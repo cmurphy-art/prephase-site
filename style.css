@@ -70,14 +70,6 @@ body{
 }
 .statement p strong{color:var(--ink);font-weight:600}
 
-/* Intro note: the .statement directly after the hero .statement.
-   Same body-text rule above, just without the 60ch cap, so it spans
-   the full content width like the bands below it. Padding is cut
-   down from the hero's so the rules above and below sit close to
-   the copy instead of the hero's large opening/closing whitespace. */
-.statement + .statement{padding:32px 0}
-.statement + .statement p{max-width:none}
-
 /* ---------- section band ---------- */
 .band{
   background:var(--ink);color:var(--white);
