@@ -138,7 +138,7 @@ body{
 }
 
 /* ---------- worksheet ---------- */
-.sheet-block{display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start}
+.sheet-block{display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;margin-top:32px}
 .sheet-copy p{font-size:15px;color:var(--inkMid);max-width:52ch;margin:0 0 14px}
 .dl{
   background:var(--white);border:1px solid var(--ruleDark);padding:22px;
